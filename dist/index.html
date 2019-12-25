@@ -3285,67 +3285,6 @@
     </section>
   </article>
 
-
-  <!-- Gas Limit -->
-  <article class="clearfix">
-    <section class="col-sm-11">
-      <a class="account-help-icon"
-         href="https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html"
-         target="_blank"
-         rel="noopener noreferrer">
-        <img src="images/icon-help.svg" class="help-icon" />
-        <p class="account-help-text" translate="OFFLINE_Step2_Label_4b">
-          21000 is the default gas limit.
-        </p>
-      </a>
-      <label translate="OFFLINE_Step2_Label_4">
-        Gas Limit
-      </label>
-      <input class="form-control" type="text" placeholder="" ng-model="tx.gasLimit"/>
-    </section>
-  </article>
-
-
-  <!-- Gas Price -->
-  <article class="clearfix">
-    <section class="col-sm-11">
-      <a class="account-help-icon"
-         href="https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html"
-         target="_blank"
-         rel="noopener noreferrer">
-        <img src="images/icon-help.svg" class="help-icon" />
-        <p class="account-help-text" translate="OFFLINE_Step2_Label_3b">
-          This was displayed in Step 1
-        </p>
-      </a>
-      <label translate="OFFLINE_Step2_Label_3">
-        Gas Price
-      </label>
-      <div class="input-group">
-        <input type="text"
-               class="form-control"
-               placeholder="50"
-               ng-model="gasPriceDec"
-               ng-disabled="checkTxReadOnly"
-               ng-class="Validator.isPositiveNumber(gasPriceDec) ? 'is-valid' : 'is-invalid'" />
-        <div class="input-group-btn">
-          <span class="dropdown dropdown-gprice" ng-cloak>
-            <a tabindex="0" style="min-width: 170px"  aria-haspopup="true" aria-expanded="false" aria-label="gas price" class="dropdown-toggle btn btn-default" ng-click="gpDropdown = !gpDropdown">
-              {{ gasPriceDef }}
-              <i class="caret"></i>
-            </a>
-            <ul class="dropdown-menu" ng-show="gpDropdown">
-              <li><a ng-class="{true:'active'}[gasPriceDef=='WEI']" ng-click="changePrice('WEI')"> WEI          </a></li>
-              <li><a ng-class="{true:'active'}[gasPriceDef=='GWEI']" ng-click="changePrice('GWEI')"> GWEI         </a></li>
-            </ul>
-          </span>
-
-        </div>
-      </div>
-    </section>
-  </article>
-
-
   <!-- Nonce -->
   <article class="clearfix">
     <section class="col-sm-11">
@@ -3362,23 +3301,6 @@
         Nonce
       </label>
       <input class="form-control" type="text" placeholder="" ng-model="nonceDec"/>
-    </section>
-  </article>
-
-
-  <!-- Data -->
-  <article class="clearfix">
-    <section class="col-sm-11" ng-show="tokenTx.id=='ether'">
-      <span class="account-help-icon">
-        <img src="images/icon-help.svg" class="help-icon" />
-        <p class="account-help-text" translate="OFFLINE_Step2_Label_6b">
-          This is optional.
-        </p>
-      </span>
-      <label translate="OFFLINE_Step2_Label_6">
-        Data
-      </label>
-      <input class="form-control" type="text" placeholder="0x4d792045746865722057616c6c6574" id="offlineData" ng-model="tx.data" />
     </section>
   </article>
 
@@ -6965,43 +6887,6 @@
             </td>
             <td>
               {{ txInfo.nonce }}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a class="account-help-icon"
-                 href="https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                    <img src="images/icon-help.svg" class="help-icon" />
-                    <p class="account-help-text" translate="GAS_LIMIT_Desc"></p>
-              </a>
-              <span translate="OFFLINE_Step2_Label_4">
-                Gas Limit
-              </span>
-            </td>
-            <td>
-              {{ txInfo.gasLimit }}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a class="account-help-icon"
-                 href="https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                   <img src="images/icon-help.svg" class="help-icon" />
-                   <p class="account-help-text" translate="GAS_PRICE_Desc"></p>
-              </a>
-              <span translate="OFFLINE_Step2_Label_3">
-                Gas Price
-              </span>
-            </td>
-            <td>
-              {{ txInfo.gasPrice.gwei }} GWEI
-              <small>
-                ({{ txInfo.gasPrice.wei }} WEI)
-              </small>
             </td>
           </tr>
         <!--
