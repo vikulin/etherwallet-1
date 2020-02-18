@@ -49,7 +49,7 @@ globalFuncs.errorMsgs = [
   'Wallet not found. ', // 14
   'Whoops. It doesn\'t look like a proposal with this ID exists yet or there is an error reading this proposal. ', // 15 - NOT USED
   'A wallet with this address already exists in storage. Please check your wallets page. ', // 16
-  '(error_17) Insufficient balance of ETH. Your gas limit * gas price + amount to send exceeds your current balance. Send more ETH to your account or use the "Send Entire Balance" button. If you believe this is in error, try pressing generate again. Required (d+) and got: (d+). [Learn More.](https://kb.myetherwallet.com/transactions/transactions-not-showing-or-pending.html)', // 17
+  '(error_17) Insufficient balance of RIV. Your gas limit * gas price + amount to send exceeds your current balance. Send more RIV to your account or use the "Send Entire Balance" button. If you believe this is in error, try pressing generate again. Required (d+) and got: (d+). [Learn More.](https://kb.myetherwallet.com/transactions/transactions-not-showing-or-pending.html)', // 17
   'All gas would be used on this transaction. This means you have already voted on this proposal or the debate period has ended.', // 18
   'Please enter a valid symbol', // 19
   'Not a valid ERC-20 token', // 20
@@ -96,9 +96,9 @@ globalFuncs.gethErrors = {
   '(geth-06) Invalid sender\\.': 'GETH_InvalidSender',
   '(geth-08) This TX\'s [nonce](https://kb.myetherwallet.com/transactions/what-is-nonce.html) is too low\\. Try incrementing the nonce by pressing the Generate button again, or [replace the pending transaction](https://kb.myetherwallet.com/transactions/check-status-of-ethereum-transaction.html)\\.': 'GETH_Nonce',
   '(geth-02) Gas price too low for acceptance\\. Try raising the gas price to 21 GWEI via the dropdown in top-right\\.': 'GETH_Cheap',
-  '(geth-01) Insufficient balance\\. Your gas limit * gas price + amount to send exceeds your current balance\\. Send more ETH to your account or use the "Send Entire Balance" button\\. If you believe this is in error, try pressing generate again\\. Required (d+) WEI and got: (d+) WEI\\. [Learn More](https://kb.myetherwallet.com/transactions/transactions-not-showing-or-pending.html)': 'GETH_Balance',
+  '(geth-01) Insufficient balance\\. Your gas limit * gas price + amount to send exceeds your current balance\\. Send more RIV to your account or use the "Send Entire Balance" button\\. If you believe this is in error, try pressing generate again\\. Required (d+) WEI and got: (d+) WEI\\. [Learn More](https://kb.myetherwallet.com/transactions/transactions-not-showing-or-pending.html)': 'GETH_Balance',
   '(geth-09) Account does not exist or account balance too low\\.': 'GETH_NonExistentAccount',
-  '(geth-04) Insufficient balance\\. Your gas limit * gas price + amount to send exceeds your current balance\\. Send more ETH to your account or use the "Send Entire Balance" button\\. If you believe this is in error, try pressing generate again\\. Required (d+) WEI and got: (d+) WEI\\. [Learn More](https://kb.myetherwallet.com/transactions/transactions-not-showing-or-pending.html)': 'GETH_InsufficientFunds',
+  '(geth-04) Insufficient balance\\. Your gas limit * gas price + amount to send exceeds your current balance\\. Send more RIV to your account or use the "Send Entire Balance" button\\. If you believe this is in error, try pressing generate again\\. Required (d+) WEI and got: (d+) WEI\\. [Learn More](https://kb.myetherwallet.com/transactions/transactions-not-showing-or-pending.html)': 'GETH_InsufficientFunds',
   '(geth-05) Intrinsic gas too low\\. Try raising the gas price to 21 GWEI via the dropdown in top-right or the gas limit to 21000 (for sending) or 200000 (for sending tokens or contracts) and try again.': 'GETH_IntrinsicGas',
   '(geth-03) Exceeds block gas limit\\. Transaction cost exceeds current gas limit\\. Limit: (d+) WEI, got: (d+) WEI\\. Please lower the gas limit to 21000 (for sending) or 200000 (for sending tokens or contracts) and try again\\. [Learn More](https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html)': 'GETH_GasLimit',
   '(geth-07) Negative value\\.': 'GETH_NegativeValue'
